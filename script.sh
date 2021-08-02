@@ -2,29 +2,29 @@
 
 # Author: Zaw Mai
 # Subject: PagerDuty Interview Technical Assignment
-# Last Updated: 07/28/2021
+# Last Updated: 08/02/2021
 
-# initialize empty result string
-result=""
+# initialize result string
+result=''
 
-# set input file separator to comman and  whitespace
-IFS=', '
-
-while read ts customer target;
+# skip header lien and start reading from 2nd line.
+while read line;
 do
- # if customer equals C1 then appending target with whitespace
- [[ "$customer" == "$2" ]] && result="$result $target"
-done < $1
+  timeStamp=$(echo $line | tr -d ' ' | cut -f1 -d',')
+  customerId=$(echo $line | tr -d ' ' | cut -f2 -d',')
+  pageId=$(echo $line | tr -d ' ' | cut -f3 -d',')
 
+  # if customer equals argument position 2 then append to result string
+  # with comma and whitespace delimiter
+  [[ "$customerId" == "$2" ]] && result="$result${result:+, }$pageId"
+  
+done < <(tail -n +2 $1)
 
-# print result: incldues duplicates
-echo $result | grep -o '[^ ]*'
+# print result in a single line
+echo $result
 
-# print result: only unique values
+# print result line by line: includews duplicates
+# echo $result | grep -o '[^ ]*'
+
+# print result line by line: only unique values
 # echo $result | grep -o '[^ ]*' | sort  -h | uniq
-
-# Reference:
-# https://unix.stackexchange.com/questions/478861/get-unique-value-for-each-line-with-unix-command
-# https://www.shell-tips.com/bash/how-to-parse-csv-file/
-# https://linuxhint.com/compare_strings_bash/
-# https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php
