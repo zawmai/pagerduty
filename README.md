@@ -4,7 +4,7 @@ Technical Assemsment of Linux and Bash
 
 **How execute script:**
 <pre><code>
-./script.sh &ltcustomer_pages.csv&gt &ltCustomerID&gt
+./script.sh &ltPath to csv file&gt &ltCustomerID&gt
 </code></pre>
 
 ## Arguments
