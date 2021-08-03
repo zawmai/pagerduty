@@ -1,0 +1,18 @@
+Below is an explanation of the script's logic:
+1) First, read in the CSV file line by line. Skip the first line because it contains column headers.
+2) Then, for each line:
+     2a) Parse out the values for timestamp, customer ID, and page ID.
+     2b) If customer ID equals the target ID, then append the page ID to a result string variable, which is printer later
+3) After all lines are parsed, print out the result string filled with page IDs. However, if there are no lines with the target customer ID, print out an error message instead. 
+
+Below is an explanation of how to execute the script:
+The script takes customer ID as an argument and prints out all page ids associated with it. If there are no entries found for the target customer ID, the script prints out an error message. Note that the "customer_pages.csv" file must be in the same folder directory as the script to execute successfully.
+
+In the command line using the cd command, navigate the folder directory containing "script.sh" and "customer_pages.csv" files. Then, enter the script filename and your target customer ID to the command line. Note that it's important to include dot and forward slash notation "./" before the script file.
+
+Execution statement structure:
+./script.sh <customer id here> 
+
+Example execution and its output:
+./script.sh C2
+ P2, P1, P3, P2, P1, P3, P2
