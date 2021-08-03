@@ -31,6 +31,10 @@ P1, P3, P2, P1, P3, P2
 ./script.sh &ltCustomerID&gt
 </code></pre>
 
+**Assumption**\
+
+- The csv file is in the same directory as the script.sh file.
+
 ## Arguments
 
 1. Filename - name of csv file containing three columns in the following order: timestamp, customer id, and page ID.
