@@ -24,7 +24,7 @@ Time, Customer ID, Page ID\
 14, C1, P3\
 15, C1, P2
 
-**Output**
+**Output**\
 P1, P3, P2, P1, P3, P2
 
 **How execute script:**
