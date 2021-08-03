@@ -2,8 +2,7 @@
 
 Technical Assemsment of Linux and Bash
 
-## Objective
-
+**Objective**\
 Given a file that contains a log (timestamp, customer id, page id), please write a script to parse it and output the list of pages visited by each customer.
 
 **Input CSV**\
