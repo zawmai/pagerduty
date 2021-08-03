@@ -29,7 +29,7 @@ P1, P3, P2, P1, P3, P2
 
 **How execute script:**
 <pre><code>
-./script.sh &ltPath to csv file&gt &ltCustomerID&gt
+./script.sh &ltCustomerID&gt
 </code></pre>
 
 ## Arguments
@@ -39,9 +39,7 @@ P1, P3, P2, P1, P3, P2
 
 ## Output
 
-1. String - Line of non-unique Page IDs delimite by a comma and a whitespace.
-
-## Example
+1. String - Line of non-unique Page IDs delimited by a comma and a whitespace.
 
 ## Reference
 
