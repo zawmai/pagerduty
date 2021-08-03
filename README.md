@@ -6,7 +6,7 @@ Technical Assemsment of Linux and Bash
 
 Given a file that contains a log (timestamp, customer id, page id), please write a script to parse it and output the list of pages visited by each customer.
 
-**Input CSV**
+**Input CSV**\
 Time, Customer ID, Page ID\
 1, C1, P1\
 2, C2, P2\
